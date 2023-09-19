@@ -21,6 +21,7 @@
 * `C# - v1.26.0`
 * `.NET - 7.0`
 * `Text Editor - Visual Studio Code`
+* `Unity - Unity 2022.3.2f1`
 
 <br>
 
@@ -33,9 +34,9 @@
     - 레벨
     - 골드
     - Status 버튼
-        -> 2. Status 보기
+        + 2. Status 보기
     - Inventory 버튼
-        -> 3. Inventory 보기
+        + 3. Inventory 보기
 
 * Status 보기
     - Status 버튼, Inventory 버튼
