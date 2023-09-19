@@ -44,13 +44,6 @@
 - 우측에 캐릭터 정보 표현
 - 뒤로가기 버튼을 누르면 1번 화면으로 이동
 
-💡 메인 화면 구성
-- 아이디
-- 레벨
-- 골드
-- Status 버튼  -> 2. Status 보기
-- Inventory 버튼  -> 3. Inventory 보기
-
 <br>
 💡 Inventory 보기
 - Status 버튼, Inventory 버튼 -> 사라지기
