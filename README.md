@@ -34,10 +34,31 @@
 - 아이디
 - 레벨
 - 골드
-- Status 버튼
-- Inventory 버튼
+- Status 버튼  -> 2. Status 보기
+- Inventory 버튼  -> 3. Inventory 보기
+
 <br>
-• 메인 화면 구성
+• Status 보기
+- Status 버튼, Inventory 버튼 -> 사라지기
+- 우측에 캐릭터 정보 표현
+- 뒤로가기 버튼을 누르면 1번 화면으로 이동
+• Inventory 보기
+-- Status 버튼, Inventory 버튼 - 사라지기
+- 우측에 인벤토리 표시
+- 아이템을 클릭하면 장착관리
+    - 아이템 장착 중 - X  : 장착 확인 팝업
+        
+        ![CleanShot 2023-09-17 at 02.30.02@2x.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/83c75a39-3aba-4ba4-a792-7aefe4b07895/68dd377d-662e-4487-9566-e75e4406de31/CleanShot_2023-09-17_at_02.30.022x.png)
+        
+    - 아이템 장착 중 - O  : 장착해제 확인 팝업
+        
+        ![CleanShot 2023-09-17 at 02.30.08@2x.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/83c75a39-3aba-4ba4-a792-7aefe4b07895/c66ed9f6-01ef-457b-a033-cd69bf21cb85/CleanShot_2023-09-17_at_02.30.082x.png)
+        
+- 장착중인 아이템은 표시
+    
+    ![CleanShot 2023-09-17 at 02.38.55@2x.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/83c75a39-3aba-4ba4-a792-7aefe4b07895/b98b758c-1ad6-4e37-a4e1-a596dd6932c8/CleanShot_2023-09-17_at_02.38.552x.png)
+    
+- 뒤로가기 버튼을 누르면 1번 화면으로 이동
 
 #### 선택 요구 사항
 
