@@ -19,9 +19,7 @@
 ## ⚙️ 개발 환경 ⚙️
 
 * `C# - v1.26.0`
-<br>
 * `.NET - 7.0`
-<br>
 * `Text Editor - Visual Studio Code`
 
 <br>
