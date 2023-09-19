@@ -113,7 +113,7 @@ TextureImporter:
       name: windowUI_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 359
         width: 640
         height: 360
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dea4acf0250e4439aec4ef658c08841
-      internalID: -1876649956
+      spriteID: 5d8fc490b369d4ceca6f1b73fb904574
+      internalID: 1872866505
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,8 @@ TextureImporter:
       name: windowUI_1
       rect:
         serializedVersion: 2
-        x: 689
-        y: 427
+        x: 665
+        y: 459
         width: 320
         height: 240
       alignment: 0
@@ -145,8 +145,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0af53d0bc06e44569b8f6eae0d285f3
-      internalID: -606446092
+      spriteID: 9e202fb316c744f42bcd45709044e029
+      internalID: -717524713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowUI_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 301
+        width: 240
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b8964256c354e318a8696e00175de7
+      internalID: -1308590431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowUI_3
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 201
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8deab9423a76948dd994e8eb215ed685
+      internalID: 1610975112
       vertices: []
       indices: 
       edges: []
@@ -162,8 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      windowUI_0: -1876649956
-      windowUI_1: -606446092
+      windowUI_0: 1872866505
+      windowUI_1: -717524713
+      windowUI_2: -1308590431
+      windowUI_3: 1610975112
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
