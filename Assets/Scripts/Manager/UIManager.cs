@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager Instance = null;
+
     [SerializeField]
     private GameObject player;
 
@@ -15,52 +18,31 @@ public class UIManager : MonoBehaviour
     private GameObject buttonPanel;
 
     [SerializeField]
-    private GameObject statusPanel;
+    public GameObject statusPanel;
 
-    private CharacterStatsHandler characterStatsHandler;
-    private PlayerInfoPanelHandler playerInfoPanelHandler;
-    private PlayerStatusPanelHandler playerStatusPanelHandler;
-    private PlayerStatSO playerStatSO;
+    public CharacterStatsHandler characterStatsHandler;
+    public PlayerStatSO playerStatSO;
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+
+        Init();
+    }
+
+    private void Init()
+    {
         characterStatsHandler = player.GetComponent<CharacterStatsHandler>();
-        playerInfoPanelHandler = playerPanel.GetComponent<PlayerInfoPanelHandler>();
         playerStatSO = characterStatsHandler.currentStats.playerStatSO;
-    }
-
-    private void Start()
-    {
-        SetPlayerInfo();
-    }
-
-    private void SetPlayerInfo()
-    {
-        playerInfoPanelHandler.SetPlayerInfoPanel(
-            playerStatSO.lvValue,
-            playerStatSO.expValue,
-            playerStatSO.maxExpValue,
-            playerStatSO.gold
-        );
-    }
-
-    private void SetPlayerStatus()
-    {
-        statusPanel.SetActive(true);
-
-        playerStatusPanelHandler.SetPlayerStatusPanel(
-            playerStatSO.atkValue,
-            playerStatSO.defValue,
-            playerStatSO.hpValue,
-            playerStatSO.ctkValue
-        );
     }
 
     public void TurnOnStatusPanel()
     {
         buttonPanel.SetActive(false);
-
-        SetPlayerStatus();
+        statusPanel.SetActive(true);
     }
 
     public void TurnOffStatusPanel()

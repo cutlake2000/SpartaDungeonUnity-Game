@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using Unity.IO.LowLevel.Unsafe;
 
-public class PlayerInfoPanelHandler : MonoBehaviour
+public class PlayerInfoPanelHandler : PlayerPanelController
 {
     [SerializeField]
     private TextMeshProUGUI playerLv;
@@ -18,19 +18,23 @@ public class PlayerInfoPanelHandler : MonoBehaviour
     [SerializeField]
     private RectTransform expBar;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         playerLv = playerLv.GetComponent<TextMeshProUGUI>();
         playerExp = playerExp.GetComponent<TextMeshProUGUI>();
         playerGold = playerGold.GetComponent<TextMeshProUGUI>();
     }
 
-    public void SetPlayerInfoPanel(int lv, float exp, float maxExp, int gold)
+    private void Start()
     {
-        WritePlayerLv(lv);
-        WritePlayerExp(exp, maxExp);
-        WritePlayerGold(gold);
-        DrawPlayerExp(exp, maxExp);
+        playerStatSO = UIManager.Instance.playerStatSO;
+
+        WritePlayerLv(playerStatSO.lvValue);
+        WritePlayerExp(playerStatSO.expValue, playerStatSO.maxExpValue);
+        DrawPlayerExp(playerStatSO.expValue, playerStatSO.maxExpValue);
+        WritePlayerGold(playerStatSO.gold);
     }
 
     private void WritePlayerLv(int lv)

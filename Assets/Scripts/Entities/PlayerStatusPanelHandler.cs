@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PlayerStatusPanelHandler : MonoBehaviour
+public class PlayerStatusPanelHandler : PlayerPanelController
 {
     [SerializeField]
     private TextMeshProUGUI playerAtk;
@@ -17,20 +17,24 @@ public class PlayerStatusPanelHandler : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI playerCtk;
 
-    void Awake()
+    protected override void Awake()
     {
+        // base.Awake();
+
         playerAtk = playerAtk.GetComponent<TextMeshProUGUI>();
         playerDef = playerDef.GetComponent<TextMeshProUGUI>();
         playerHp = playerHp.GetComponent<TextMeshProUGUI>();
         playerCtk = playerCtk.GetComponent<TextMeshProUGUI>();
     }
 
-    public void SetPlayerStatusPanel(float atk, float def, float hp, float ctk)
+    private void Start()
     {
-        WritePlayerAtk(atk);
-        WritePlayerDef(def);
-        WritePlayerHp(hp);
-        WritePlayerCtk(ctk);
+        playerStatSO = UIManager.Instance.playerStatSO;
+
+        WritePlayerAtk(playerStatSO.atkValue);
+        WritePlayerDef(playerStatSO.defValue);
+        WritePlayerHp(playerStatSO.hpValue);
+        WritePlayerCtk(playerStatSO.ctkValue);
     }
 
     private void WritePlayerAtk(float atk)

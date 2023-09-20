@@ -3721,6 +3721,8 @@ MonoBehaviour:
   playerPanel: {fileID: 1178373252}
   buttonPanel: {fileID: 1606976628}
   statusPanel: {fileID: 1419750506}
+  characterStatsHandler: {fileID: 0}
+  playerStatSO: {fileID: 0}
 --- !u!1 &1712011679
 GameObject:
   m_ObjectHideFlags: 0
