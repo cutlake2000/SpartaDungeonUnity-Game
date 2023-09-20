@@ -27,6 +27,6 @@ public class CharacterStatsHandler : MonoBehaviour
         currentStats = new CharacterStats { playerStatSO = playerStatSO };
 
         // TODO
-        currentStats.statsChangeType = baseStats.statsChangeType;
+        // currentStats.statsChangeType = baseStats.statsChangeType;
     }
 }

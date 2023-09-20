@@ -1988,8 +1988,9 @@ GameObject:
   - component: {fileID: 1178373253}
   - component: {fileID: 1178373255}
   - component: {fileID: 1178373254}
+  - component: {fileID: 1178373256}
   m_Layer: 5
-  m_Name: PlayerPanel
+  m_Name: PlayerInfoPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2058,6 +2059,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178373252}
   m_CullTransparentMesh: 1
+--- !u!114 &1178373256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178373252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24378e4393b084792bfa2079d85d8dc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLv: {fileID: 1757710381}
+  playerExp: {fileID: 1414414916}
+  playerGold: {fileID: 2050125741}
+  expBar: {fileID: 1430726420}
 --- !u!1 &1294458165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,6 +2797,7 @@ GameObject:
   - component: {fileID: 1419750507}
   - component: {fileID: 1419750509}
   - component: {fileID: 1419750508}
+  - component: {fileID: 1419750510}
   m_Layer: 5
   m_Name: StatusPanel
   m_TagString: Untagged
@@ -2851,6 +2869,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419750506}
   m_CullTransparentMesh: 1
+--- !u!114 &1419750510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419750506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5b35b346fbc4478963e9ad83dc60ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAtk: {fileID: 247266759}
+  playerDef: {fileID: 1593943003}
+  playerHp: {fileID: 1353499002}
+  playerCtk: {fileID: 1898960472}
 --- !u!1 &1430726419
 GameObject:
   m_ObjectHideFlags: 0
@@ -3683,14 +3717,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48acb3e52086e476e8c79914e6236c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonPanel: {fileID: 1606976628}
-  StatusPanel: {fileID: 1419750506}
-  playerLevel: {fileID: 1757710381}
-  playerExp: {fileID: 1414414916}
-  playerAtk: {fileID: 247266759}
-  playerDef: {fileID: 1593943003}
-  playerHp: {fileID: 1353499002}
-  playerCtk: {fileID: 1898960472}
+  player: {fileID: 538582282}
+  playerPanel: {fileID: 1178373252}
+  buttonPanel: {fileID: 1606976628}
+  statusPanel: {fileID: 1419750506}
 --- !u!1 &1712011679
 GameObject:
   m_ObjectHideFlags: 0
@@ -4723,7 +4753,7 @@ GameObject:
   - component: {fileID: 2110258028}
   - component: {fileID: 2110258030}
   m_Layer: 5
-  m_Name: GUIPanel
+  m_Name: MenuPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

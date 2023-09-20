@@ -10,8 +10,10 @@ using UnityEngine;
 public class PlayerStatSO : ScriptableObject
 {
     [Header("Player Info")]
-    public int level;
+    public int lvValue;
     public float expValue;
+    public float maxExpValue;
+    public int gold;
 
     [Header("Player Stat")]
     public float atkValue;

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496eef36dd82b4d9c8118545f8141871, type: 3}
   m_Name: PlayerStatData
   m_EditorClassIdentifier: 
-  level: 1
-  expValue: 0
+  lvValue: 10
+  expValue: 9
+  maxExpValue: 12
   atkValue: 40
   defValue: 30
   hpValue: 20
