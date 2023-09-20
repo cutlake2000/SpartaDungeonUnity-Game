@@ -1,18 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private GameObject ButtonPanel;
+
+    [SerializeField]
+    private GameObject StatusPanel;
+
+    [SerializeField]
+    private TextMeshProUGUI playerLevel;
+
+    [SerializeField]
+    private TextMeshProUGUI playerExp;
+
+    [SerializeField]
+    private TextMeshProUGUI playerAtk;
+
+    [SerializeField]
+    private TextMeshProUGUI playerDef;
+
+    [SerializeField]
+    private TextMeshProUGUI playerHp;
+
+    [SerializeField]
+    private TextMeshProUGUI playerCtk;
+
+    private void Awake() { }
+
+    public void TurnOnStatusPanel()
     {
-        
+        ButtonPanel.SetActive(false);
+        StatusPanel.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TurnOffStatusPanel()
     {
-        
+        StatusPanel.SetActive(false);
+        ButtonPanel.SetActive(true);
     }
 }

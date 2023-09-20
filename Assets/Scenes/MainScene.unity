@@ -283,7 +283,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 119446404}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1706830497}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: TurnOnStatusPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &119446404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,6 +1169,7 @@ GameObject:
   - component: {fileID: 538582285}
   - component: {fileID: 538582284}
   - component: {fileID: 538582283}
+  - component: {fileID: 538582286}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1252,6 +1265,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &538582286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538582282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ed4544d73784ecebf9efea7ca4ef56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseStats:
+    statsChangeType: 0
+    playerStatSO: {fileID: 11400000, guid: e2c59b0168f17424dafc8a713193375b, type: 2}
+  statsModifiers: []
 --- !u!1 &821566494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2517,13 +2546,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1706830497}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: TurnOffStatusPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2757,7 +2786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1419750507
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3548,7 +3577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1606976629
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3654,6 +3683,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48acb3e52086e476e8c79914e6236c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonPanel: {fileID: 1606976628}
+  StatusPanel: {fileID: 1419750506}
+  playerLevel: {fileID: 1757710381}
+  playerExp: {fileID: 1414414916}
+  playerAtk: {fileID: 247266759}
+  playerDef: {fileID: 1593943003}
+  playerHp: {fileID: 1353499002}
+  playerCtk: {fileID: 1898960472}
 --- !u!1 &1712011679
 GameObject:
   m_ObjectHideFlags: 0
