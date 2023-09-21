@@ -26,7 +26,6 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     public TextMeshProUGUI menuText;
 
-    public CharacterStatsHandler characterStatsHandler;
     public PlayerStatSO playerStatSO;
 
     private void Awake()
@@ -41,14 +40,13 @@ public class UIManager : MonoBehaviour
 
     private void Init()
     {
-        characterStatsHandler = player.GetComponent<CharacterStatsHandler>();
-        playerStatSO = characterStatsHandler.currentStats.playerStatSO;
+        playerStatSO = player.GetComponent<CharacterStatsHandler>().currentStats.playerStatSO;
         menuText = menuText.GetComponent<TextMeshProUGUI>();
     }
 
     public void TurnOnStatusPanel()
     {
-SetMenuText(Menu.Status);
+        SetMenuText(Menu.Status);
         buttonPanel.SetActive(false);
         statusPanel.SetActive(true);
     }
@@ -60,24 +58,27 @@ SetMenuText(Menu.Status);
         buttonPanel.SetActive(true);
     }
 
-    private void SetMenuText(Menu menu){
-        switch(menu){
-              case Menu.Menu:
-            menuText.text = "메뉴";
-            break;
-                      case Menu.Status:
-            menuText.text = "상태창";
-            break;
-                      case Menu.Inventory:
-            menuText.text = "인벤토리";
-            break;
-                      case Menu.Shop:
-            menuText.text = "상점";
-            break;
+    private void SetMenuText(Menu menu)
+    {
+        switch (menu)
+        {
+            case Menu.Menu:
+                menuText.text = "메뉴";
+                break;
+            case Menu.Status:
+                menuText.text = "상태창";
+                break;
+            case Menu.Inventory:
+                menuText.text = "인벤토리";
+                break;
+            case Menu.Shop:
+                menuText.text = "상점";
+                break;
         }
     }
 
-    private enum Menu{
+    private enum Menu
+    {
         Menu,
         Status,
         Inventory,
