@@ -17,10 +17,8 @@ public class PlayerStatusPanelHandler : PlayerPanelController
     [SerializeField]
     private TextMeshProUGUI playerCtk;
 
-    protected override void Awake()
+    private void Awake()
     {
-        // base.Awake();
-
         playerAtk = playerAtk.GetComponent<TextMeshProUGUI>();
         playerDef = playerDef.GetComponent<TextMeshProUGUI>();
         playerHp = playerHp.GetComponent<TextMeshProUGUI>();

@@ -18,10 +18,8 @@ public class PlayerInfoPanelHandler : PlayerPanelController
     [SerializeField]
     private RectTransform expBar;
 
-    protected override void Awake()
+    private void Awake()
     {
-        base.Awake();
-
         playerLv = playerLv.GetComponent<TextMeshProUGUI>();
         playerExp = playerExp.GetComponent<TextMeshProUGUI>();
         playerGold = playerGold.GetComponent<TextMeshProUGUI>();
