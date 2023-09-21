@@ -8,7 +8,6 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance = null;
 
-    [SerializeField]
     private GameObject player;
 
     [SerializeField]
@@ -22,6 +21,9 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     public GameObject statusPanel;
+
+    [SerializeField]
+    public GameObject inventoryPanel;
 
     [SerializeField]
     public TextMeshProUGUI menuText;
@@ -40,21 +42,40 @@ public class UIManager : MonoBehaviour
 
     private void Init()
     {
+        player = GameManager.Instance.player;
         playerStatSO = player.GetComponent<CharacterStatsHandler>().currentStats.playerStatSO;
         menuText = menuText.GetComponent<TextMeshProUGUI>();
     }
 
     public void TurnOnStatusPanel()
     {
-        SetMenuText(Menu.Status);
         buttonPanel.SetActive(false);
+
+        SetMenuText(Menu.Status);
         statusPanel.SetActive(true);
     }
 
     public void TurnOffStatusPanel()
     {
-        SetMenuText(Menu.Menu);
         statusPanel.SetActive(false);
+
+        SetMenuText(Menu.Menu);
+        buttonPanel.SetActive(true);
+    }
+
+    public void TurnOnInventoryPanel()
+    {
+        buttonPanel.SetActive(false);
+
+        SetMenuText(Menu.Inventory);
+        inventoryPanel.SetActive(true);
+    }
+
+    public void TurnOffInventoryPanel()
+    {
+        inventoryPanel.SetActive(false);
+
+        SetMenuText(Menu.Menu);
         buttonPanel.SetActive(true);
     }
 
