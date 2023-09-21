@@ -227,8 +227,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1706830496}
   - {fileID: 109560461}
+  - {fileID: 1706830496}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5586,10 +5586,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 538582282}
   playerPanel: {fileID: 1178373252}
-  menuPanel: {fileID: 0}
+  menuPanel: {fileID: 1675709002}
   buttonPanel: {fileID: 1606976628}
   statusPanel: {fileID: 1419750506}
   menuText: {fileID: 2045358441}
+  characterStatsHandler: {fileID: 0}
   playerStatSO: {fileID: 0}
 --- !u!1 &1712011679
 GameObject:

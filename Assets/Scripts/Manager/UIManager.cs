@@ -26,6 +26,7 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     public TextMeshProUGUI menuText;
 
+    public CharacterStatsHandler characterStatsHandler;
     public PlayerStatSO playerStatSO;
 
     private void Awake()
@@ -40,7 +41,12 @@ public class UIManager : MonoBehaviour
 
     private void Init()
     {
-        playerStatSO = player.GetComponent<CharacterStatsHandler>().currentStats.playerStatSO;
+        characterStatsHandler = player.GetComponent<CharacterStatsHandler>();
+        Debug.Log("UM - characterStatsHandler" + characterStatsHandler.name);
+        playerStatSO = characterStatsHandler.currentStats.playerStatSO;
+        Debug.Log("UM - playerStatSO" + playerStatSO.name);
+        // characterStatsHandler = GameManager.Instance.characterStatsHandler;
+        // playerStatSO = GameManager.Instance.playerStatSO;
         menuText = menuText.GetComponent<TextMeshProUGUI>();
     }
 
