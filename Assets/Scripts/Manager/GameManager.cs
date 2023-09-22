@@ -10,8 +10,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject player;
 
-    public ItemData itemData1;
-    public ItemData itemData2;
+    public ItemData[] testItems;
 
     private void Awake()
     {
@@ -23,7 +22,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        player.GetComponent<PlayerInventory>().AddItem(itemData1);
-        player.GetComponent<PlayerInventory>().AddItem(itemData2);
+        for (int i = 0; i < testItems.Length; i++)
+        {
+            player.GetComponent<PlayerInventory>().AddItem(testItems[i]);
+        }
     }
 }

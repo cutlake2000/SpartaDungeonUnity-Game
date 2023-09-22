@@ -413,8 +413,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 538582282}
-  itemData1: {fileID: 11400000, guid: 21c12d8a535a24984ad0f7dbad69808d, type: 2}
-  itemData2: {fileID: 11400000, guid: acad44507ce7542cf9bcc2d2dd9f7568, type: 2}
+  testItems:
+  - {fileID: 11400000, guid: 807b6c39c3fff4ae9922d38dfb6f9b34, type: 2}
+  - {fileID: 11400000, guid: 920983daff02f4caf94c912fadb5074e, type: 2}
+  - {fileID: 11400000, guid: dbc3e56c8322e468da0a896757470b75, type: 2}
+  - {fileID: 11400000, guid: 3811adbe6f0e24611a445975f0b8cb3f, type: 2}
+  - {fileID: 11400000, guid: 28179ba83e0634762b1f91f68c42ae51, type: 2}
+  - {fileID: 11400000, guid: 74bc5ca7fa16a4c44b5d4d1f099ada51, type: 2}
 --- !u!1 &119446401
 GameObject:
   m_ObjectHideFlags: 0
