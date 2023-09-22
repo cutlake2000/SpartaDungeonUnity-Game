@@ -95,7 +95,18 @@ public class PlayerInventory : MonoBehaviour
         selectedItem = slots[index];
         selectedItemIndex = index;
 
-        UIManager.Instance.TurnOnItemEquipConfirmPanel(selectedItem);
+        // switch (selectedItem.item.type)
+        // {
+        //     case ItemType.Equipable:
+        //         if (selectedItem.item. = true)
+        //         {
+        //             UIManager.Instance.TurnOnItemEquipConfirmPanel(selectedItem);
+        //         }
+
+        //         break;
+        //     case ItemType.Consumable:
+        //         break;
+        // }
     }
 
     private void ClearSeletecItemWindow()
