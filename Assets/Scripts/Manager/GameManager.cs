@@ -10,11 +10,20 @@ public class GameManager : MonoBehaviour
 
     public GameObject player;
 
+    public ItemData itemData1;
+    public ItemData itemData2;
+
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
         }
+    }
+
+    private void Start()
+    {
+        player.GetComponent<PlayerInventory>().AddItem(itemData1);
+        player.GetComponent<PlayerInventory>().AddItem(itemData2);
     }
 }

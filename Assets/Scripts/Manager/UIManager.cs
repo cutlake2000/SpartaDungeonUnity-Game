@@ -26,6 +26,12 @@ public class UIManager : MonoBehaviour
     public GameObject inventoryPanel;
 
     [SerializeField]
+    public GameObject confirmPanel;
+
+    [SerializeField]
+    public GameObject itemEquipConfirmPanel;
+
+    [SerializeField]
     public TextMeshProUGUI menuText;
 
     public PlayerStatSO playerStatSO;
@@ -77,6 +83,19 @@ public class UIManager : MonoBehaviour
 
         SetMenuText(Menu.Menu);
         buttonPanel.SetActive(true);
+    }
+
+    public void TurnOnItemEquipConfirmPanel()
+    {
+        confirmPanel.SetActive(true);
+        itemEquipConfirmPanel.SetActive(true);
+    }
+
+    public void TurnOffItemEquipConfirmPanel()
+    {
+        Debug.Log("Check");
+        confirmPanel.SetActive(false);
+        itemEquipConfirmPanel.SetActive(false);
     }
 
     private void SetMenuText(Menu menu)

@@ -37,18 +37,18 @@
   - Status 버튼 ⭕️
     - Status 보기 ⭕️
   - Inventory 버튼 ⭕️
-    - Inventory 보기
+    - Inventory 보기 ⭕️
 
 - Status 보기
 
-  - Status 버튼, Inventory 버튼
-    - 사라지기
+  - Status 버튼, Inventory 버튼 ⭕️
+    - 사라지기 ⭕️
   - 우측에 캐릭터 정보 표현 ⭕️
   - 뒤로가기 버튼을 누르면 1번 화면으로 이동 ⭕️
 
 - Inventory 보기
-  - Status 버튼, Inventory 버튼 -> 사라지기
-  - 우측에 인벤토리 표시
+  - Status 버튼, Inventory 버튼 -> 사라지기 ⭕️
+  - 우측에 인벤토리 표시 ⭕️
   - 아이템을 클릭하면 장착관리
     - 아이템 장착 중 - X : 장착 확인 팝업
     - 아이템 장착 중 - O : 장착해제 확인 팝업
@@ -66,6 +66,3 @@
   - 구매 완료 후 팝업
   - 구매한 아이템은 인벤토리로 추가
   - 상점 아이템이 넘어간다면 스크롤 되게 적용
-
-<br>
-⭕️❌

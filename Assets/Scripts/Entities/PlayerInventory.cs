@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ItemSlot
@@ -26,13 +27,74 @@ public class PlayerInventory : MonoBehaviour
     {
         slots = new ItemSlot[uiSlots.Length];
 
-        // for (int i = 0; i < slots.Length; i++)
-        // {
-        //     slots[i] = new ItemSlot();
-        //     uiSlots[i].index = i;
-        //     uiSlots[i].Clear();
-        // }
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i] = new ItemSlot();
+            uiSlots[i].index = i;
+            uiSlots[i].Clear();
+        }
 
-        // ClearSeletecItemWindow();
+        ClearSeletecItemWindow();
+    }
+
+    public void AddItem(ItemData item)
+    {
+        ItemSlot emptySlot = GetEmptySlot();
+
+        if (emptySlot != null)
+        {
+            emptySlot.item = item;
+            UpdateUI();
+            return;
+        }
+    }
+
+    void UpdateUI()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].item != null)
+                uiSlots[i].Set(slots[i]);
+            else
+                uiSlots[i].Clear();
+        }
+    }
+
+    ItemSlot GetItemStack(ItemData item)
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].item == item)
+                return slots[i];
+        }
+
+        return null;
+    }
+
+    ItemSlot GetEmptySlot()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].item == null)
+                return slots[i];
+        }
+
+        return null;
+    }
+
+    public void SelectItem(int index)
+    {
+        if (slots[index].item == null)
+            return;
+
+        selectedItem = slots[index];
+        selectedItemIndex = index;
+
+        UIManager.Instance.TurnOnItemEquipConfirmPanel();
+    }
+
+    private void ClearSeletecItemWindow()
+    {
+        selectedItem = null;
     }
 }
