@@ -36,6 +36,8 @@ public class UIManager : MonoBehaviour
 
     public PlayerStatSO playerStatSO;
 
+    private ItemSlot selectedItem;
+
     private void Awake()
     {
         if (Instance == null)
@@ -85,18 +87,23 @@ public class UIManager : MonoBehaviour
         buttonPanel.SetActive(true);
     }
 
-    public void TurnOnItemEquipConfirmPanel()
+    public void TurnOnItemEquipConfirmPanel(ItemSlot selectedItem)
     {
+        this.selectedItem = selectedItem;
+
         confirmPanel.SetActive(true);
         itemEquipConfirmPanel.SetActive(true);
     }
 
     public void TurnOffItemEquipConfirmPanel()
     {
-        Debug.Log("Check");
         confirmPanel.SetActive(false);
         itemEquipConfirmPanel.SetActive(false);
+
+        PlayerInventory.Instance.EquipItem();
     }
+
+    public void EquipConfirm() { }
 
     private void SetMenuText(Menu menu)
     {

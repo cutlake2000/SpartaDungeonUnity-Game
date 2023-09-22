@@ -82,6 +82,11 @@ public class PlayerInventory : MonoBehaviour
         return null;
     }
 
+    public void EquipItem()
+    {
+        uiSlots[selectedItemIndex].Equip();
+    }
+
     public void SelectItem(int index)
     {
         if (slots[index].item == null)
@@ -90,7 +95,7 @@ public class PlayerInventory : MonoBehaviour
         selectedItem = slots[index];
         selectedItemIndex = index;
 
-        UIManager.Instance.TurnOnItemEquipConfirmPanel();
+        UIManager.Instance.TurnOnItemEquipConfirmPanel(selectedItem);
     }
 
     private void ClearSeletecItemWindow()
