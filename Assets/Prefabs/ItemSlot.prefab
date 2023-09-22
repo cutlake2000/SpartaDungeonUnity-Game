@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3172406920336227338}
   - component: {fileID: 7884446279431060069}
   - component: {fileID: 2901167288087428086}
-  - component: {fileID: 7835248100245811211}
   m_Layer: 5
   m_Name: ItemImage
   m_TagString: Untagged
@@ -28,11 +27,10 @@ RectTransform:
   m_GameObject: {fileID: 1328124313099094436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8000001, y: 0.8000001, z: 1}
+  m_LocalScale: {x: 0.888889, y: 0.888889, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4237720643013904597}
-  m_Father: {fileID: 5382441410435389031}
+  m_Children: []
+  m_Father: {fileID: 4237720643013904597}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -78,29 +76,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!223 &7835248100245811211
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328124313099094436}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 3
-  m_TargetDisplay: 0
 --- !u!1 &3353259499806708732
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +222,6 @@ GameObject:
   - component: {fileID: 4237720643013904597}
   - component: {fileID: 2703265756712260789}
   - component: {fileID: 7735137703917842378}
-  - component: {fileID: 4605139817312451117}
   m_Layer: 5
   m_Name: ItemBG
   m_TagString: Untagged
@@ -264,10 +238,11 @@ RectTransform:
   m_GameObject: {fileID: 6095378956620230802}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1249999, y: 1.1249999, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3172406920336227338}
+  m_Children:
+  - {fileID: 3172406920336227338}
+  m_Father: {fileID: 5382441410435389031}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -313,29 +288,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!223 &4605139817312451117
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6095378956620230802}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!1 &6783071406895409750
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,7 +397,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3172406920336227338}
+  - {fileID: 4237720643013904597}
   - {fileID: 3392624425124444518}
   m_Father: {fileID: 0}
   m_RootOrder: -1
